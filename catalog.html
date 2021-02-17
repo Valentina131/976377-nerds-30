@@ -13,6 +13,7 @@
     </head>
     <body class="page-body inner-page">
     <header class="main-header">
+    <div class="main-navigation-wrapper">
     <nav class="main-navigation">
     <a class="main-header-logo" href="index.html" >
         <img src="img/nerdslogo.png" width="160" height="65" alt="Логотип Nerds">
@@ -24,13 +25,18 @@
         <li><a href="#">Контакты</a></li>
     </ul>
     </nav>
-     <div class="basket-user">
+    <div class="basket-user">
     <a class="basket" href="#">Корзина</a>
     <img src="img/cart-icon.svg" width="15" height="11" alt="корзина">
      </div>
+     </div>
      <h1>Магазин готовых шаблонов</h1>
    </header>
-   <main class="container">
+
+
+
+   <main class="container page-catalog">
+    <div class="filter-cost">
     <h2>
         Фильтр
     </h2>
@@ -60,9 +66,10 @@
                         </label>
                         <input id="max-cost" type="text" name="max-cost" placeholder="15000" value="15000">
                     </p>
-            </fieldset>
-            <fieldset>
-                <legend class="filter grid">Сетка:</legend>
+                  </fieldset>
+            <div class="filters-grid-catalog">
+            <fieldset class="grid">
+                <legend class="filter-grid">Сетка:</legend>
                 <ul class="grid-list">
                     <li class="grid-element">
                         <input class="radio-element" type="radio" name="option" id="adaptive" checked disabled="">
@@ -104,8 +111,11 @@
                 </ul>
             </fieldset>
             <button class="button button-show"type="submit">ПОКАЗАТЬ</button>
+            </div>
         </section>
         </form>
+        </div>
+        <div class="catalog-sorting">
         <section class="catalog">
             <h2>Каталог</h2>
             <div class="sorting">
@@ -191,7 +201,10 @@
         </ul>
             <a class="pagination" href="#">Следующая</a>
     </div>
+    </div>
    </main>
+
+
     <footer class="main-footer">
     <div class="footer-map">
     <h2>Карта</h2>
@@ -204,6 +217,7 @@
       <span class="footer-phone">тел. +7 (812) 275-75-75</span>
       <a class="button" href="appear-window">Напишите нам</a>
     </div>
+    <div class="container">
     <div class="footer-social">
       <h2>Иконки</h2>
       <ul class="footer-list">
@@ -224,6 +238,7 @@
     <div class="friend">
       <h3>Давайте дружить, это выгодно!</h3>
       <span>Скидка 10% для друзей из социальных сетей.</span>
+    </div>
     </div>
     </footer>
     <section class="modal">

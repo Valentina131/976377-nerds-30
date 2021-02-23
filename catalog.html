@@ -37,11 +37,10 @@
 
    <main class="container page-catalog">
     <div class="filter-cost">
-    <h2>
-        Фильтр
-    </h2>
+    <h2>Фильтр</h2>
     <form class="form" method="get" action="https://echo.htmlacademy.ru">
         <section class="filters">
+          <div class="filter-cost-range">
             <fieldset>
                 <h2>Стоимость:</h2>
                 <div class="left-circle">
@@ -67,6 +66,7 @@
                         <input id="max-cost" type="text" name="max-cost" placeholder="15000" value="15000">
                     </p>
                   </fieldset>
+                  </div>
             <div class="filters-grid-catalog">
             <fieldset class="grid">
                 <legend class="filter-grid">Сетка:</legend>
@@ -115,12 +115,14 @@
         </section>
         </form>
         </div>
+
         <div class="catalog-sorting">
         <section class="catalog">
             <h2>Каталог</h2>
-            <div class="sorting">
                 <h2>СОРТИРОВКА</h2>
+                <div class="sorting">
                 <b>СОРТИРОВАТЬ:</b>
+                <div class="sort-arrow">
                 <ul class="sort-list">
                     <li class="sort-list-item"><a href="#">По цене</a></li>
                     <li class="sort-list-item"><a href="#">По типу</a></li>
@@ -135,6 +137,7 @@
                         <span><img src="img/arrow/icon-up-dir.svg" width="11" height="10" alt="Стрелочка вверх"></span>
                     </button>
                 </p>
+                </div>
             </div>
         </section>
         <div class="partners">
@@ -217,7 +220,7 @@
       <span class="footer-phone">тел. +7 (812) 275-75-75</span>
       <a class="button" href="appear-window">Напишите нам</a>
     </div>
-    <div class="container">
+    <div class="footer-social-friend">
     <div class="footer-social">
       <h2>Иконки</h2>
       <ul class="footer-list">

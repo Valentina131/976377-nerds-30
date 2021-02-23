@@ -73,7 +73,7 @@
 }
 
 .main-header{
-  margin-bottom: 163px;
+  margin-bottom: 108px;
 }
 
 a {
@@ -87,10 +87,9 @@ img {
 
 /* Main navigation */
 .main-navigation-wrapper{
-  display:grid;
-  grid-template-columns: 1fr min-content;
-  grid-column-gap: 246px;
   width:1160px;
+  display:flex;
+  justify-content: space-between;
   margin-bottom: 72px;
   margin:0 auto;
   padding:0 10px;
@@ -100,9 +99,11 @@ img {
 
 
 .main-navigation{
-  display:grid;
-  grid-template-columns:160px 1fr;
-  grid-column-gap: 202px;
+  width: 800px;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-between;
   font-size: 16px;
   line-height: 30px;
   color: var(--basic-black);
@@ -116,7 +117,20 @@ ul li{
   list-style:none;
 }
 
+.main-header-logo{
+  width:160px;
+  height:65px;
+  outline: 5px solid rgba(159, 250, 12, 0.924);
+  outline-offset: -5px;
+}
+
 .site-navigation{
+  width:437px;
+  min-height: 70px;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
   margin:0;
   padding:0;
   outline: 5px solid rgba(0, 255, 255, 0.3);
@@ -124,17 +138,27 @@ ul li{
 }
 
 .basket-user{
-  display:grid;
-  grid-template-columns:min-content 15px;
-  grid-column-gap: 25px;
+  width:115px;
+  max-width: 140px;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content:space-between;
   outline: 5px solid rgba(0, 255, 255, 0.3);
   outline-offset: -5px;
+}
+
+.basket{
+  /*padding-left: 25px;*/
+  display: flex;
+  order:1;
 }
 
 .site-navigation a,
 .basket-user{
   color: var(--basic-black);
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 .site-navigation a:hover,
@@ -164,13 +188,14 @@ ul li{
 /* Container */
 
 .container {
-  width: 1159px;
+  width: 1160px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
 /*Button*/
 .button{
+  display: inline-block;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -190,11 +215,6 @@ ul li{
 }
 
 /*Container*/
-.container {
-  width: 1160px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
 
 .main-header h1{
   text-align:center;
@@ -207,12 +227,30 @@ ul li{
 /*main-grids*/
 .page-catalog{
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns:260px 1fr;
   align-content: start;
   grid-column-gap: 140px;
   outline: 5px solid rgba(255, 0, 0, 0.7);
   outline-offset: -5px;
 }
+
+.filter-cost-range{
+  width:260px;
+  margin-bottom:54px;
+}
+
+.grid {
+  width:208px;
+}
+
+.grid:nth-child(1){
+  margin-bottom:43px;
+}
+
+.grid:nth-child(2){
+  margin-bottom:48px;
+}
+
 
 .filter-cost{
   outline: 5px solid rgba(112, 43, 91, 0.7);
@@ -224,19 +262,88 @@ ul li{
   outline-offset: -5px;
 }
 
-.partners{
-  outline: 5px solid rgba(164, 230, 12, 0.7);
+.catalog-sorting{
+  outline: 5px solid rgba(43, 92, 3, 0.938);
   outline-offset: -5px;
 }
 
 .catalog{
+  width:760px;
   outline: 5px solid rgba(255, 102, 0, 0.938);
   outline-offset: -5px;
 }
 
 .sorting{
+  width: 760px;
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content:space-between;
   padding: 0;
   margin: 0;
+  outline: 5px solid rgba(73, 4, 70, 0.938);
+  outline-offset: -5px;
+}
+
+.sort-arrow{
+  width: 360px;
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content:space-between;
+  outline: 5px solid rgba(251, 5, 25, 0.938);
+  outline-offset: -5px;
+}
+
+.sort-list{
+  width:272px;
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content:space-between;
+  margin-right:47px;
+  margin:0px;
+  padding:0px;
+  outline: 5px solid rgba(8, 64, 128, 0.938);
+  outline-offset: -5px;
+}
+
+.arrows{
+  width:41px;
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content:space-between;
+  outline: 5px solid rgba(102, 12, 83, 0.938);
+  outline-offset: -5px;
+}
+
+.arrow-down{
+ /* margin-right: 19px;*/
+}
+
+.partners{
+  outline: 5px solid rgba(164, 230, 12, 0.7);
+  outline-offset: -5px;
+}
+
+.partners-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 55px;
+}
+
+.partners-list-item{
+  width: 360px;
+  min-height: 810px;
+  margin-right: 40px;
+  margin-bottom: 30px;
+}
+
+.partners-list-item:nth-child(2n) {
+  margin-right: 0;
 }
 
 .filters fieldset{
@@ -245,7 +352,8 @@ ul li{
 
 .sorting b,
 a h3,
-.filter
+.filter,
+.filter-grid
 {
   font-weight:700;
   font-size:18px;
@@ -297,6 +405,12 @@ a p{
   opacity:1;
 }
 
+.advantage-list,
+.grid-list{
+  padding:0px;
+  margin:0px;
+}
+
 .grid-element label,
 .advantage-item label,
 .grid-element label:hover,
@@ -337,7 +451,6 @@ a p{
   background-color:var(--background);
 }
 
-
 .button-show:hover{
   background-color:var(--button-show-hover) ;
 }
@@ -347,13 +460,25 @@ a p{
   opacity:0.3;
 }
 
+.pagination-list{
+  display:flex;
+  flex-direction:row;
+  margin:0px;
+  padding:0px;
+}
+
+.pagination-item {
+  margin-right:11px;
+}
+
 .pagination-item a,
-.pagination {
+.pagination{
   font-weight:500;
   line-height: 18px;
   color:var(--basic-black);
   background-color: var(--background);
   border-radius: 3px;
+  text-transform: uppercase;
 }
 
 .pagination-item a:hover,
@@ -379,6 +504,8 @@ a p{
   }
 
   .friend h3{
+    margin:0px;
+    margin-top: 10px;
     font-size: 36px;
     line-height: 36px;
   }
@@ -415,11 +542,38 @@ a p{
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   }
 
-  .container{
+  .footer-social-friend{
+    padding-top:68px;
+    margin:0 auto;
+    padding:0 10px;
+    width:1160px;
     display:grid;
-    grid-template-columns: 1fr 660px;
+    grid-template-columns: 400px 1fr;
     align-content: start;
-    grid-column-gap: 130px;
+    outline: 5px solid rgba(116, 2, 2, 0.7);
+    outline-offset: -5px;
+  }
+
+  .footer-list{
+    width:261px;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-between;
+    padding:0px;
+    margin:0px;
+    outline: 5px solid rgba(4, 26, 98, 0.7);
+    outline-offset: -5px;
+  }
+
+  .footer-social-item:nth-child(1),
+  .footer-social-item:nth-child(2){
+    margin-right:9px;
+  }
+
+  .friend{
+    outline: 5px solid #f35308f6;
+    outline-offset: -5px;
   }
 
   /*Modal*/
@@ -435,6 +589,14 @@ a p{
 
   .contacts-window p{
     line-height: 18px;
+  }
+
+  .modal-text textarea{
+    width: 760px;
+  }
+
+  .modal input{
+    width:360px;
   }
 
   textarea,

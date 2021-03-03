@@ -12,7 +12,7 @@
   </head>
   <body class="page-body inner-page">
   <header class="main-header">
-    <div class="main-navigation-wrapper container">
+    <div class="main-navigation-wrapper">
     <nav class="main-navigation">
       <a class="main-header-logo">
         <img src="img/nerdslogo.png" width="160" height="65" alt="Логотип Nerds">
@@ -26,46 +26,38 @@
      </nav>
      <div class="basket-user">
       <a class="basket" href="#">Корзина</a>
-      <img src="img/cart-icon.svg" width="15" height="11" alt="корзина">
        </div>
-</div>
-   </header>
+       </div>
+       </header>
   <main class="container">
-    <h1>Nerds</h1>
-    <section class="futures">
-      <div class="futures-dots">
-      <h2>Преимущества</h2>
-        <ul class="features-list-image">
-          <li><img src="img/content/picture1.png" width="760" height="431" alt="picture-1"></li>
-          <li><img src="img/content/picture2.png" width="760" height="431" alt="picture-2"></li>
-          <li><img src="img/content/picture3.png" width="760" height="431" alt="picture-3"></li>
-        </ul>
-        <ul class="list-dots">
-          <li class="dots-items"><span>dots1</span></li>
-          <li class="dots-items"><span>dots2</span></li>
-          <li class="dots-items"><span>dots3</span></li>
-        </ul>
-        </div>
-    <ul class="features-list">
-      <li class="feature-item">
-        <h3>Долго, дорого,<br> скрупулезно.</h3>
+    <h1 class="visually-hidden">Nerds</h1>
+    <section class="slider slide-picture-1">
+    <h2 class="visually-hidden">Преимущества</h2>
+    <ul class="slider-list">
+      <li class="slider-item slide current">
+        <h3 class="slide-title">Долго, дорого,<br> скрупулезно.</h3>
           <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
-          <a class="button features-button" href="#">Узнать больше</a>
+          <a class="button slide-button" href="#">Узнать больше</a>
       </li>
-      <li class="feature-item">
-          <h3>Любим математику как никто другой</h3>
+      <li class="slider-item slide ">
+          <h3 class="slide-title">Любим математику как никто другой</h3>
           <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-          <a class="button features-button" href="#">Узнать больше</a>
+          <a class="button slide-button" href="#">Узнать больше</a>
         </li>
-        <li class="feature-item">
-          <h3>Только ночь,<br> только хардкор</h3>
+        <li class="slider-item slide">
+          <h3 class="slide-title">Только ночь,<br> только хардкор</h3>
           <p>Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только начинается.</p>
-          <a class="button features-button" href="#">Узнать больше</a>
+          <a class="button slide-button" href="#">Узнать больше</a>
         </li>
     </ul>
+    <div class="slider-controls">
+      <button type="button" aria-label="Первый слайд"></button>
+      <button type="button" aria-label="Второй слайд"></button>
+      <button type="button" aria-label="Третий слайд"></button>
+    </div>
     </section>
     <section class="services">
-      <h2>Услуги компании</h2>
+      <h2 class="visually-hidden">Услуги компании</h2>
       <div class="index-columns">
       <ul class="services-list">
         <li class="services-items">
@@ -88,12 +80,11 @@
         </li>
       </ul>
     </div>
-    </section>
+  </div>
+  </section>
     <section class="description">
       <div class="features-description">
-      <h2>
-        О студии
-      </h2>
+      <h2 class="visually-hidden">О студии</h2>
       <p class="description-height">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
       <p class="description-text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
       <p class="heading-height caption-table">
@@ -125,7 +116,7 @@
             </div>
     </section>
     <section class="gallery-partners">
-      <h2>Партнеры</h2>
+      <h2 class="visually-hidden">Партнеры</h2>
       <div class="partners">
 		    	<ul class="partners-list">
 		    		<li class="partners-item">
@@ -149,11 +140,12 @@
 		    			</a>
 		    		</li>
 		    	</ul>
+          </div>
     </section>
     </main>
     <footer class="main-footer">
     <div class="footer-map">
-    <h2>Карта</h2>
+    <h2 class="visually-hidden">Карта</h2>
     <img src="img/content/map.png" width="1340" height="416" alt="map"> <!-- Я понимаю что тут не картинка должна быть)пока не умею карты вставлять-->
     <img src="img/content/marker.png" width="231" height="190" alt="маркер">
     </div>
@@ -161,23 +153,29 @@
       <h2>NЁRDS DESIGN STUDIO</h2>
       <p class="footer-address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       <span class="footer-phone">тел. +7 (812) 275-75-75</span>
-      <a class="button" href="appear-window">Напишите нам</a>
+      <a class="button button-contacts" href="appear-window">Напишите нам</a>
     </div>
     <div class="footer-social-friend">
     <div class="footer-social">
-      <h2>Иконки</h2>
+      <h2 class="visually-hidden">Иконки</h2>
       <ul class="footer-list">
         <li class="footer-social-item">
-          <a class="social-button"  href="#">Вконтакте</a>
+          <a class="social-button"  href="#">
+            <span class="visually-hidden">Вконтакте</span>
           <img src="img/social/vk-icon.svg" width="26" height="15" alt="вконтакте">
+        </a>
         </li>
         <li  class="footer-social-item">
-          <a class="social-button"  href="#">Фейсбук</a>
+          <a class="social-button"  href="#">
+            <span class="visually-hidden">Фейсбук</span>
           <img src="img/social/fb-icon.svg" width="12" height="22" alt="фейсбук">
+        </a>
         </li>
         <li  class="footer-social-item">
-          <a class="social-button" href="#">Инстаграм</a>
+          <a class="social-button" href="#">
+          <span class="visually-hidden">Инстаграм</span>
           <img src="img/social/insta-icon.svg" width="21" height="21" alt="инстаграм">
+        </a>
         </li>
       </ul>
     </div>
@@ -204,9 +202,10 @@
           <label for="text"><b>Текст письма:</b></label>
           <textarea name="text" id="text" rows="5" cols="250" placeholder="В свободной форме" required=""></textarea>
         </p>
-        <button class="button" type="submit">Отправить</button>
-          <a class="modal-close" href="#">Закрыть</a>
+        <button class="button button-writer" type="submit">Отправить</button>
+        <a class="modal-close" href="#">Закрыть</a>
         </form>
     </section>
-  </body
-</html>
+  </body>
+  </html>
+

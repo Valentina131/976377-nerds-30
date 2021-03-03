@@ -8,8 +8,7 @@
     <link rel="apple-touch-icon" href="favicon/180.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link href="css/catalog.css" rel="stylesheet" type="text/css">
-    <link >
+    <link href="css/catalog.css" rel="stylesheet" type="text/css"/>
     </head>
     <body class="page-body inner-page">
     <header class="main-header">
@@ -28,45 +27,45 @@
     <div class="basket-user">
     <a class="basket" href="#">Корзина</a>
     <img src="img/cart-icon.svg" width="15" height="11" alt="корзина">
-     </div>
-     </div>
-     <h1>Магазин готовых шаблонов</h1>
+    </div>
+    </div>
+   <h1>Магазин готовых шаблонов</h1>
    </header>
-
-
-
-   <main class="container page-catalog">
+   <main class="page-catalog container">
     <div class="filter-cost">
-    <h2>Фильтр</h2>
-    <form class="form" method="get" action="https://echo.htmlacademy.ru">
-        <section class="filters">
-          <div class="filter-cost-range">
-            <fieldset>
-                <h2>Стоимость:</h2>
-                <div class="left-circle">
-                    <img src="img/circle/ellipse1.png" width="20" height="20" alt="Левый ползунок">
-                </div>
-                <div class="right-circle">
-                    <img src="img/circle/ellipse3.png" width="20" height="20" alt="Правый ползунок">
-                </div>
-                <p class="filter-range">
-                    <label class="filter" for="filter">Стоимость</label>
-                    <input type="range" id="filter" name="filter" min="0" max="15000" step="10">
-                </p>
-                    <p class="range-cost">
-                        <label for="min-cost">
-                            ОТ
-                        </label>
-                        <input id="min-cost" type="text" name="min-cost" placeholder="0" value="0">
-                    </p>
-                    <p class="range-cost">
-                        <label for="max-cost">
-                            ДО
-                        </label>
-                        <input id="max-cost" type="text" name="max-cost" placeholder="15000" value="15000">
-                    </p>
-                  </fieldset>
-                  </div>
+    <h2 class="visually-hidden">Фильтр</h2>
+    <form method="get" action="https://echo.htmlacademy.ru">
+    <section class="filters">
+      <div class="filter-cost-range">
+      <fieldset class="filter-item">
+        <h2 class="visually-hidden">Стоимость</h2>
+          <legend>Стоимость:</legend>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="
+                  width: 30%;
+                  margin-left: 20%
+                "></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0" style="
+                left: 20%
+              "></div>
+              <div class="toggle toggle-max" tabindex="0" style="
+                left: 50%
+              "></div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price">
+                от <input type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+                до <input type="number" name="max-price" value="15000">
+              </label>
+            </div>
+          </div>
+      </fieldset>
+    </form>
             <div class="filters-grid-catalog">
             <fieldset class="grid">
                 <legend class="filter-grid">Сетка:</legend>
@@ -110,7 +109,7 @@
                     </li>
                 </ul>
             </fieldset>
-            <button class="button button-show"type="submit">ПОКАЗАТЬ</button>
+            <button class="button button-show" type="submit">ПОКАЗАТЬ</button>
             </div>
         </section>
         </form>
@@ -118,8 +117,8 @@
 
         <div class="catalog-sorting">
         <section class="catalog">
-            <h2>Каталог</h2>
-                <h2>СОРТИРОВКА</h2>
+            <h2 class="visually-hidden">Каталог</h2>
+                <h2 class="visually-hidden">СОРТИРОВКА</h2>
                 <div class="sorting">
                 <b>СОРТИРОВАТЬ:</b>
                 <div class="sort-arrow">
@@ -201,16 +200,14 @@
             <li class="pagination-item">
                 <a href="#">3</a>
             </li>
+            <li><a class="pagination" href="#">Следующая</a></li>
         </ul>
-            <a class="pagination" href="#">Следующая</a>
     </div>
     </div>
    </main>
-
-
     <footer class="main-footer">
     <div class="footer-map">
-    <h2>Карта</h2>
+    <h2 class="visually-hidden">Карта</h2>
     <img src="img/content/map.png" width="1340" height="416" alt="map"> <!-- Я понимаю что тут не картинка должна быть)пока не умею карты вставлять-->
     <img src="img/content/marker.png" width="231" height="190" alt="маркер">
     </div>
@@ -222,19 +219,25 @@
     </div>
     <div class="footer-social-friend">
     <div class="footer-social">
-      <h2>Иконки</h2>
+      <h2 class="visually-hidden">Иконки</h2>
       <ul class="footer-list">
         <li class="footer-social-item">
-          <a href="#">Вконтакте</a>
+          <a class="social-button"  href="#">
+            <span class="visually-hidden">Вконтакте</span>
           <img src="img/social/vk-icon.svg" width="26" height="15" alt="вконтакте">
+        </a>
         </li>
-        <li class="footer-social-item">
-          <a href="#">Фейсбук</a>
+        <li  class="footer-social-item">
+          <a class="social-button"  href="#">
+            <span class="visually-hidden">Фейсбук</span>
           <img src="img/social/fb-icon.svg" width="12" height="22" alt="фейсбук">
+        </a>
         </li>
-        <li class="footer-social-item">
-          <a href="#">Инстаграм</a>
+        <li  class="footer-social-item">
+          <a class="social-button" href="#">
+          <span class="visually-hidden">Инстаграм</span>
           <img src="img/social/insta-icon.svg" width="21" height="21" alt="инстаграм">
+        </a>
         </li>
       </ul>
     </div>
@@ -256,7 +259,6 @@
             <label for="email"><b>Ваш e-mail</b></label>
             <input type="email" name="email" id="email" placeholder="Для отправки ответа" required="">
           </p>
-        </div>
         <p class="modal-text">
           <label for="text"><b>Текст письма:</b></label>
           <textarea name="text" id="text" rows="5" cols="250" placeholder="В свободной форме" required=""></textarea>

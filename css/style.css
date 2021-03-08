@@ -24,8 +24,11 @@
   --button-show-hover:#DFDFDF;
   --button-show-active:#D5D5D5;
   --popap-border-hover:#B4B9BB;
-  --shadow-social:inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  --shadow-social: 0px 3px 0px rgba(0, 1, 1, 0.1);
   --border-dots:#C1C1C1;
+  --text-active:rgba(255,255,255,0.3);
+  --modal-window-shadow:0px 20px 40px rgba(0, 0, 0, 0.4);
+  --range-controls:#f1f1f1;
 }
 
 @font-face {
@@ -70,7 +73,7 @@
   font-weight: 400;
   font-style:normal;
   color: var(--basic-black);
-  background-color: var(--background);
+  background-color: var(--basic-white);
 
   min-height: 100%;
   display: grid;
@@ -106,21 +109,22 @@ ul li{
 
 /* Main navigation */
 .main-header{
-  margin-top:49px;
+  padding-top:49px;
+  background-color:var(--background);
 }
 
 .main-navigation-wrapper{
-  width: 1157px;
+  width: 1160px;
   height:65px;
   display: flex;
   justify-content: space-between;
   margin:0 auto;
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
+ /* outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;*/
 }
 
 .main-navigation{
-  width: 799px;;
+  width:799px;
   display: flex;
   justify-content:space-between;
   align-items:flex-start;
@@ -139,10 +143,9 @@ ul li{
   width:437px;
   min-height:65px;
   display: flex;
-  /*flex-wrap: wrap;переносит на след строку, хотя переполнения нет*/
   margin: 0px;
   padding: 0px;
-  outline: 5px solid rgba(41, 37, 231, 0.3);
+ /* outline: 5px solid rgba(41, 37, 231, 0.3);*/
 }
 
 .site-navigation,
@@ -210,24 +213,24 @@ ul li{
 
 /*main*/
 .container {
-  width: 1157px;
+  width: 1160px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-/* slider */
 
+
+/* slider */
 .slider {
-  width:1157px;
+  width:1160px;
   margin: 0 auto;
   padding: 0px;
   min-width: 940px;
-  background-color:var(--background);
   position: relative;
   text-align:left;
   margin-bottom:80px;
-  outline: 5px solid rgba(235, 28, 9, 0.945);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(235, 28, 9, 0.945);
+  outline-offset: -5px;*/
 }
 
 .slider-list{
@@ -284,7 +287,10 @@ outline-offset: -5px;*/
 
 .button:active {
   background:var(--button-active);
+  color:var(--text-active);
+  box-shadow:var(--shadow-social);
 }
+
 
 .slider-controls {
   position: absolute;
@@ -342,10 +348,20 @@ outline-offset: -5px;*/
 
 .services{
   width:1100px;
-  margin-bottom: 121px;
-  /*будет разделительная линия , отступы изменятся*/
-  outline: 5px solid rgba(255, 0, 0 , 0.3);
+  margin-bottom:119px;
+  position: relative;
 }
+
+.services-list::before{
+  content: "";
+  position: absolute;
+  display:block;
+  top:430px;
+  left:0px;
+  width: 1158px;
+  height: 2px;
+  background-color:var(--social-background);
+ }
 
 .services-list{
   display: grid;
@@ -357,8 +373,8 @@ outline-offset: -5px;*/
 
 .services-items{
   width:300px;
-  outline: 5px solid rgba(0, 255, 255 , 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 255 , 0.3);
+  outline-offset: -5px;*/
 }
 
 .services-items h3{
@@ -423,10 +439,8 @@ outline-offset: -5px;*/
 .description{
   width:1174px;
   display: grid;
-  margin-bottom:127px;
-  /*будет разделительная линия , отступы изменятся*/
+  margin-bottom:119px;
   grid-template-columns: 1fr 374px;
-  outline: 5px solid rgba(255, 0, 0, 0.7);
 }
 
 .description-height{
@@ -439,8 +453,8 @@ outline-offset: -5px;*/
 
 .features-description{
   margin-right:149px;
-  outline: 5px solid rgba(0, 255, 255, 0.7);
-  outline-offset: -5px;
+ /* outline: 5px solid rgba(0, 255, 255, 0.7);
+  outline-offset: -5px;*/
 }
 
 .description-list{
@@ -467,8 +481,8 @@ outline-offset: -5px;*/
 
 .statistic{
   order:1;
-  outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;*/
 }
 
 .statistic img{
@@ -503,7 +517,8 @@ outline-offset: -5px;*/
 /*Gallery-partners*/
 
 .gallery-partners{
-  margin-bottom:126px;
+  margin-left:32px;
+  margin-bottom:124px;
 }
 
 .partners-list{
@@ -512,28 +527,71 @@ outline-offset: -5px;*/
   flex-direction:row;
   align-items: center;
   justify-content: space-between;
+  margin:0px;
+  padding:0px;
 }
 
-/*как разместить эти линии между картинками посередине? сейчас они с краю*/
+.partners{
+  position: relative;
+}
 
-.partners-item:not(:first-child)
- {
-  margin-bottom:20px;
-  background-image:url("img/line/line_vertical.png");
-  background-position:0 0;
-  background-repeat:no-repeat;
+.partners-list::before{
+  content: "";
+  position: absolute;
+  display:block;
+  bottom:142px;
+  right:0px;
+  width: 1158px;
+  height: 2px;
+  background-color:var(--social-background);
  }
 
- /* тоже самое между блоками*/
-
- .partners-list{
-  background-image:url("img/line/line.png");
-  background-position:0 0;
-  background-repeat:no-repeat;
+ .partners-list::after{
+  content: "";
+  position: absolute;
+  display:block;
+  top:140px;
+  right:0px;
+  width: 1158px;
+  height: 2px;
+  background-color:var(--social-background);
  }
 
 .partners-item{
  opacity:0.2;
+}
+
+.partners-item:nth-child(1)::after{
+  content: "";
+  position: absolute;
+  display:block;
+  top:15px;
+  left:248px;
+  width: 2px;
+  height: 52px;
+  background-color:var(--social-background);
+}
+
+.partners-item:nth-child(2)::after{
+  content: "";
+  position: absolute;
+  display:block;
+  top:15px;
+  left:560px;
+  width: 2px;
+  height: 52px;
+  background-color:var(--social-background);
+}
+
+.partners-item:nth-child(3)::after{
+  content: "";
+  position: absolute;
+  display:block;
+  top:15px;
+  right:260px;
+  width: 2px;
+  height: 52px;
+  background-color:var(--social-background);
 }
 
 .partners-item:hover{
@@ -544,16 +602,28 @@ outline-offset: -5px;*/
   opacity:0.1;
  }
 
+
 /*Footer*/
 
 .main-footer{
+  width:1440px;
+  margin: 0 auto;
+  padding: 0 10px;
   margin-bottom: 68px;
 }
+
+.main-footer .mark{
+  display:none;
+}
+
+.footer-map img:nth-child(2){
+  width:1440px;
+ }
 
 .button-contacts{
     display: inline-block;
     margin-right: 16px;
-    padding: 13px 44px;
+    padding: 9px 34px;
     font: inherit;
     text-align: center;
     vertical-align: middle;
@@ -561,8 +631,17 @@ outline-offset: -5px;*/
     border: none;
   }
 
+.footer-contacts{
+    display:none;
+    width:319px;
+    height:308px;
+}
 
 .footer-contacts h2{
+  margin-top:49px;
+  margin-left:50px;
+  margin-bottom:23px;
+  font-family:700;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
@@ -572,6 +651,7 @@ outline-offset: -5px;*/
 .footer-phone{
   color:var(--modal-address);
   line-height: 18px;
+  margin-left:50px;
 }
 
 .footer-contacts h2,
@@ -579,14 +659,22 @@ outline-offset: -5px;*/
   font-weight: 700;
 }
 
+.button-contacts{
+  margin-top:38px;
+  margin-bottom:47px;
+  margin-left:50px;
+}
+
+
 .footer-social-friend{
-  padding-top:68px;
   margin:0 auto;
   padding:0 10px;
   width:1160px;
   display:grid;
   grid-template-columns: 400px 1fr;
   align-content: start;
+  margin-top:68px;
+  margin-bottom:68px;
   /*outline: 5px solid rgba(116, 2, 2, 0.7);
   outline-offset: -5px;*/
 }
@@ -627,6 +715,10 @@ outline-offset: -5px;*/
  box-shadow:var(--shadow-social);
  }
 
+ .footer-social-item:active img{
+  opacity:0.3;
+  }
+
 .friend h3{
   margin:0px;
   margin-top:7px;
@@ -635,15 +727,31 @@ outline-offset: -5px;*/
   line-height: 36px;
 }
 
-
 .friend span{
   color:var(--discount-string);
 }
 
+
 /*Modal*/
+.modal{
+  display:none;
+  width:960px;
+  height:590px;
+  box-shadow:var(--modal-window-shadow);
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.contacts-window{
+  display:flex;
+}
+
 .modal h2{
+  margin-top:63px;
+  margin-bottom:64px;
+  margin-left:100px;
   font-size: 45px;
-  line-height:52,73px;
+  line-height:53px;
 }
 
 .modal h2,
@@ -655,18 +763,42 @@ outline-offset: -5px;*/
   line-height: 18px;
 }
 
-.modal input{
+.modal-name input,
+.modal-email input{
   width:360px;
+  height:50px;
 }
 
-.button-writer .button{
+.modal-name{
+  margin-left:100px;
+  margin-right:40px;
+}
+
+.modal-email{
+  margin-right:100px;
+}
+
+.modal-text{
+  margin-left:101px;
+  margin-bottom:47px;
+}
+
+.modal-text textarea{
+  width:760px;
+  height:118px;
+}
+
+.button-writer{
     display: inline-block;
-    padding: 14px 150px;
+    padding: 11px 68px;
     font: inherit;
     text-align: center;
     vertical-align: middle;
     text-transform: uppercase;
-    border: none;
+    border:none;
+    outline: none;
+    margin-left:101px ;
+    margin-bottom:84px;
 }
 
 textarea,

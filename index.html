@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>HTML Academy: Nerds</title>
     <link rel="icon" href="favicon.ico" sizes="32x32">
-    <link rel="icon" href="favicon/icon.svg" type="image/svg+×ml">
-    <link rel="apple-touch-icon" href="favicon/180.png">
+    <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/icons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link href="css/style.min.css" rel="stylesheet" type="text/css">
   </head>
   <body class="page-body inner-page">
   <header class="main-header">
@@ -37,11 +37,11 @@
     <h2 class="visually-hidden">Преимущества</h2>
     <ul class="slider-list">
       <li class="slider-item slide current">
-        <h3 class="slide-title">Долго, дорого,<br> скрупулезно.</h3>
+        <h3 class="slide-title">Долго, дорого,<br>скрупулезно.</h3>
           <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
           <a class="button slide-button" href="#">Узнать больше</a>
       </li>
-      <li class="slider-item slide ">
+      <li class="slider-item slide">
           <h3 class="slide-title">Любим математику как никто другой</h3>
           <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
           <a class="button slide-button" href="#">Узнать больше</a>
@@ -74,7 +74,7 @@
         <li class="services-items">
           <img src="img/present/present2.jpg" width="300" height="146" alt="приложения">
           <h3>Приложения</h3>
-          <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+          <p>Покорите топ-10 приложений <br> в AppStore и Google Play</p>
           <a class="button button-application" href="#">Заказать</a>
         </li>
         <li class="services-items">
@@ -91,7 +91,7 @@
       <h2 class="visually-hidden">О студии</h2>
       <p class="description-height">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
       <p class="description-text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-      <p class="heading-height caption-table">
+      <p class="heading-height">
         ВЫПОЛНЯЕМ ЗАКАЗЫ НА РАЗРАБОТКУ:
       </p>
       <ul class="description-list">
@@ -156,7 +156,7 @@
     </div>
     <div class="footer-contacts">
       <h2>NЁRDS DESIGN STUDIO</h2>
-      <p class="footer-address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      <p class="footer-address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
       <span class="footer-phone">тел. +7 (812) 275-75-75</span>
       <a class="button button-contacts" href="appear-window">Напишите нам</a>
     </div>
@@ -190,18 +190,18 @@
     </div>
   </div>
     </footer>
-    <section class="modal">
+    <section class="modal modal-window-send">
       <div class="modal-window">
       <h2>Напишите нам</h2>
       <form  action="https://echo.htmlacademy.ru" method="post">
         <div class="contacts-window">
-          <p class="hint modal-name">
+          <p class="modal-name">
             <label for="name"><b>Ваше имя:</b></label>
-            <input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста" required="" autofocus="">
+            <input type="text" name="name" id="name" placeholder="Имя Фамилия" required="" autofocus="">
           </p>
-          <p class="hint modal-email">
-            <label for="email"><b>Ваш e-mail</b></label>
-            <input type="email" name="email" id="email" placeholder="Для отправки ответа" required="">
+          <p class="modal-email">
+            <label for="email"><b>Ваш email</b></label>
+            <input type="email" name="email" id="email" placeholder="email@example.com" required="">
           </p>
           </div>
         <p class="modal-text">
@@ -209,7 +209,9 @@
           <textarea name="text" id="text" rows="5" cols="250" placeholder="В свободной форме" required=""></textarea>
         </p>
         <button class="button button-writer" type="submit">Отправить</button>
-        <a class="modal-close" href="#">Закрыть</a>
+        <div class="button-close">
+        <button class="modal-close visually-hidden" type="button" aria-label="Закрыть"></button>
+        </div>
         </form>
       </div>
     </section>

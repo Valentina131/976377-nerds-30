@@ -8,8 +8,8 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
-  <link href="css/style.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link href="css/style2.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="page-body inner-page">
@@ -20,10 +20,10 @@
           <img src="img/nerdslogo.png" width="160" height="65" alt="Логотип Nerds">
         </a>
         <ul class="site-navigation">
+          <li><a href="#">Контакты</a></li>
           <li><a href="#">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
           <li class="active-item"><a href="catalog.html">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
         </ul>
       </nav>
       <div class="basket-user">
@@ -36,7 +36,7 @@
     <div class="filter-cost">
       <h2 class="visually-hidden">Фильтр</h2>
       <section class="filters">
-        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru" target="_blank">
           <div class="filter-cost-range">
             <fieldset class="filter-item">
               <legend>Стоимость:</legend>
@@ -46,8 +46,9 @@
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="toggle toggle-min" tabindex="0"></div>
-                  <div class="toggle toggle-max" tabindex="0"></div>
+                  <div class="toggle toggle-min" tabindex="0" aria-label="в меньшую сторону"></div>
+                  <div class="toggle toggle-max" tabindex="0"
+                  aria-label="в большую сторону"></div>
                 </div>
                 <div class="price-controls">
                   <label class="min-price">
@@ -64,11 +65,13 @@
                 <legend class="filter-choice-radio">Сетка:</legend>
                 <ul class="choice-radio-list">
                   <li class="choice-radio-element">
+
                     <input class="choice-input-radio visually-hidden" type="radio" name="option" id="adaptive" checked
                       disabled="">
                     <label for="adaptive">Адаптивная</label>
                   </li>
                   <li class="choice-radio-element">
+
                     <input class="choice-input-radio visually-hidden" type="radio" name="option" id="fixed">
                     <label for="fixed">Фиксированная</label>
                   </li>
@@ -107,7 +110,7 @@
                 </ul>
               </fieldset>
             </div>
-            <button class="button button-show" type="submit">ПОКАЗАТЬ</button>
+            <button class="button button-show" type="submit" aria-label="показать сайты с выбранными элементами">ПОКАЗАТЬ</button>
           </div>
         </form>
       </section>
@@ -125,9 +128,10 @@
               <li class="sort-list-item"><a href="#">По названию</a></li>
             </ul>
             <p class="arrows arrow-down">
-              <button type="button"></button>
+              <button class="visually-hidden" type="button" aria-label="стрелочка вниз"></button>
+            </p>
               <p class="arrows arrow-up">
-                <button type="button"></button>
+                <button class="visually-hidden" type="button" aria-label="стрелочка вверх"></button>
               </p>
           </div>
         </div>
@@ -136,61 +140,61 @@
         <ul class="partners-cards-list">
           <li class="partners-cards-item">
             <a href="#">
-              <img src="img/catalog/sedona.jpg" width="359" height="578" alt="Седона">
-              <div class="partners-description">
+              <img src="img/catalog/sedona.jpg" width="359" height="578" alt="картинка-ссылка на сайт по поику гостиниц в городе sedona">
+              <div class="partners-description" tabindex="0">
                 <h3 class="link-site">SEDONA</h3>
                 <p>Информационный сайт <br> для туристов</p>
-                <span class="button button-cards">9 900 <span>&#8381;</span></span>
+                <span class="button button-cards" tabindex="0">9 900 <span>&#8381;</span></span>
               </div>
             </a>
           </li>
           <li class="partners-cards-item">
             <a href="#">
-              <img src="img/catalog/pink.jpg" width="359" height="578" alt="pink ">
-              <div class="partners-description">
+              <img src="img/catalog/pink.jpg" width="359" height="578" alt="картинка-ссылка на сайт приложения для телефонов pink">
+              <div class="partners-description" tabindex="0">
                 <h3>PINK APP</h3>
                 <p>Продуктовый лендинг приложения для iOS и Android</p>
-                <span class="button button-cards">9 900 <span>&#8381;</span></span>
+                <span class="button button-cards" tabindex="0">9 900 <span>&#8381;</span></span>
               </div>
             </a>
           </li>
           <li class="partners-cards-item">
             <a href="#">
-              <img src="img/catalog/borodinski.jpg" width="359" height="578" alt="borodinski">
-              <div class="partners-description">
+              <img src="img/catalog/borodinski.jpg" width="359" height="578" alt="картинка-ссылка на сайт барбершопа borodinski">
+              <div class="partners-description" tabindex="0">
                 <h3>BARBERSHOP</h3>
                 <p>Сайт салоны красоты.<br> Для мужчин, да.</p>
-                <span class="button button-cards">9 900 <span>&#8381;</span></span>
+                <span class="button button-cards" tabindex="0">9 900 <span>&#8381;</span></span>
               </div>
             </a>
           </li>
           <li class="partners-cards-item">
             <a href="#">
-              <img src="img/catalog/mishka.jpg" width="359" height="578" alt="mishka">
-              <div class="partners-description">
+              <img src="img/catalog/mishka.jpg" width="359" height="578" alt="картинка-ссылка на сайт вязаных игрушек mishka">
+              <div class="partners-description" tabindex="0">
                 <h3>MISHKA</h3>
                 <p>Интернет-магазин <br> вязаных игрушек</p>
-                <span class="button button-cards">9 900 <span>&#8381;</span></span>
+                <span class="button button-cards" tabindex="0">9 900 <span>&#8381;</span></span>
               </div>
             </a>
           </li>
           <li class="partners-cards-item">
             <a href="#">
-              <img src="img/catalog/plus.jpg" width="359" height="578" alt="a plus">
-              <div class="partners-description">
+              <img src="img/catalog/plus.jpg" width="359" height="578" alt="картинка-ссылка на сайт лендинг курсов повышения квалификации a plus">
+              <div class="partners-description" tabindex="0">
                 <h3>A PLUS</h3>
                 <p>Лендинг курсов повышения квалификации</p>
-                <span class="button button-cards">9 900 <span>&#8381;</span></span>
+                <span class="button button-cards" tabindex="0">9 900 <span>&#8381;</span></span>
               </div>
             </a>
           </li>
           <li class="partners-cards-item">
             <a href="#">
-              <img src="img/catalog/kvast.jpg" width="359" height="578" alt="kvast">
-              <div class="partners-description">
+              <img src="img/catalog/kvast.jpg" width="359" height="578" alt="картинка-ссылка на сайт производителя крафтового кваса kvast">
+              <div class="partners-description" tabindex="0">
                 <h3>КВАСТ</h3>
                 <p>Промо-сайт производителя крафтового кваса</p>
-                <span class="button button-cards">9 900 <span>&#8381;</span></span>
+                <span class="button button-cards" tabindex="0">9 900 <span>&#8381;</span></span>
               </div>
             </a>
           </li>
@@ -213,7 +217,7 @@
   <footer class="main-footer">
     <div class="footer-map">
       <h2 class="visually-hidden">Карта</h2>
-      <img src="img/content/map.png" width="1340" height="416" alt="map">
+      <img src="img/content/map.png" width="1340" height="416" alt="карта">
       <img class="mark" src="img/content/marker.png" width="231" height="190" alt="маркер">
     </div>
     <div class="footer-contacts">
@@ -229,19 +233,19 @@
           <li class="footer-social-item">
             <a class="social-button" href="#">
               <span class="visually-hidden">Вконтакте</span>
-              <img src="img/social/vk-icon.svg" width="26" height="15" alt="вконтакте">
+              <img aria-hidden="true" focusable="false"  src="img/social/vk-icon.svg" width="26" height="15" alt="вконтакте">
             </a>
           </li>
           <li class="footer-social-item">
             <a class="social-button" href="#">
               <span class="visually-hidden">Фейсбук</span>
-              <img src="img/social/fb-icon.svg" width="12" height="22" alt="фейсбук">
+              <img aria-hidden="true" focusable="false" src="img/social/fb-icon.svg" width="12" height="22" alt="фейсбук">
             </a>
           </li>
           <li class="footer-social-item">
             <a class="social-button" href="#">
               <span class="visually-hidden">Инстаграм</span>
-              <img src="img/social/insta-icon.svg" width="21" height="21" alt="инстаграм">
+              <img aria-hidden="true" focusable="false" src="img/social/insta-icon.svg" width="21" height="21" alt="инстаграм">
             </a>
           </li>
         </ul>
@@ -270,12 +274,13 @@
           <label for="text"><b>Текст письма:</b></label>
           <textarea name="text" id="text" rows="5" cols="250" placeholder="В свободной форме" required=""></textarea>
         </p>
-        <button class="button button-writer" type="submit">Отправить</button>
+        <button class="button button-writer" type="submit" aria-label="отправить заполненную форму">Отправить</button>
         <div class="button-close">
-          <a class="modal-close visually-hidden" href="#">Закрыть</a>
+          <button class="modal-close visually-hidden"  type="button" href="#">Закрыть</button>
         </div>
       </form>
     </div>
   </section>
 </body>
+
 </html>

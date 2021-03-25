@@ -1,19 +1,57 @@
-function initMap() {
-  var coordinates = {lat: 47.212325, lng: 38.933663},
+const buttonСontacts = document.querySelector(".button-contacts");
+const modalWindowSend = document.querySelector(".modal-window-send");
+const buttonClose = modalWindowSend.querySelector(".button-close");
+const windowForm = modalWindowSend.querySelector(".window-form");
+const modalNameFocus = modalWindowSend.querySelector(".modal-name-focus");
+const modalEmailWindow = modalWindowSend.querySelector(".modal-email-window");
 
-      map = new google.maps.Map(document.getElementById('map'), {
-          center: coordinates
-      }),
+let isStorageSupport = true;
+let storage = "";
 
-      marker = new google.maps.Marker({
-          position: coordinates,
-          map: map,
-            animation: google.maps.Animation.BOUNCE
-      });
+try {
+  storage = localStorage.getItem("name");
+} catch (err) {
+  isStorageSupport = false;
 }
-image = 'img/marker.png',
-marker = new google.maps.Marker({
-    position: coordinates,
-    map: map,
-    icon: image
+
+buttonСontacts.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modalWindowSend.classList.add("modal-show");
+
+  if (storage) {
+    modalNameFocus.value = storage;
+    modalEmailWindow.focus();
+  } else {
+    modalNameFocus.focus();
+  }
 });
+
+buttonClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modalWindowSend.classList.remove("modal-show");
+  modalWindowSend.classList.remove("modal-error");
+});
+
+windowForm.addEventListener("submit", function (evt) {
+  if (!modalNameFocus.value || !modalEmailWindow.value) {
+    evt.preventDefault();
+    modalWindowSend.classList.remove("modal-error");
+    modalWindowSend.offsetWidth = modalWindowSend.offsetWidth;
+    modalWindowSend.classList.add("modal-error");
+  }else {
+    if (isStorageSupport) {
+    localStorage.setItem("name", modalNameFocus.value);
+  }
+}
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (modalWindowSend.classList.contains("modal-show")) {
+      evt.preventDefault();
+      modalWindowSend.classList.remove("modal-show");
+    }
+  }
+});
+
+
